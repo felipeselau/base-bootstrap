@@ -44,7 +44,7 @@
     </nav>
     <div
       id="carouselExampleIndicators"
-      class="carousel slide h-50 overflow-hidden"
+      class="carousel slide overflow-hidden"
       data-ride="carousel"
     >
       <ol class="carousel-indicators">
@@ -57,21 +57,21 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" style="max-height: 500px;">
           <img
             src="https://m.media-amazon.com/images/S/pv-target-images/30e67f04921b7f4ed174477657e68820484a9b3ebddb4dc8e7d488b8c5360f69.jpg"
             class="d-flex align-items-center justify-content-center w-100"
             alt="Slide 1"
           />
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" style="max-height: 500px;">
           <img
             src="https://m.media-amazon.com/images/S/pv-target-images/12a9a9d1f5d5358760d07897073f8f054098538f10eb53475b1f0ad209dc66e8.jpg"
             class="d-flex align-items-center justify-content-center w-100"
             alt="Slide 2"
           />
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" style="max-height: 500px;">
           <img
             src="https://is1-ssl.mzstatic.com/image/thumb/MfLheav5zDckPEg7BTzspw/1200x675.jpg"
             class="d-flex align-items-center justify-content-center w-100"
@@ -294,48 +294,27 @@
             </button>
           </div>
           <div class="modal-body">
-            <!-- Formulário de Feedback -->
-            <form>
+            <form class="px-4 needs-validation" novalidate>
               <div class="form-group">
-                <label for="inputNome">Nome:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputNome"
-                  placeholder="Seu nome"
-                />
+                <label for="inputNome">Seu Nome:</label>
+                <input type="text" id="inputNome" class="form-control" required minlength="3">
+                <div class="invalid-feedback">Nome Inválido</div>
               </div>
               <div class="form-group">
-                <label for="inputEmail">Email:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail"
-                  placeholder="Seu email"
-                />
+                <label for="inputEmail">Seu Email:</label>
+                <input type="email" id="inputEmail" class="form-control" required>
+                <div class="invalid-feedback">Email Inválido</div>
               </div>
               <div class="form-group">
-                <label for="inputMensagem">Sua Mensagem:</label>
-                <textarea
-                  class="form-control"
-                  id="inputMensagem"
-                  rows="3"
-                  placeholder="Digite sua mensagem aqui"
-                ></textarea>
+                <label for="textFeedback">Seu Feedback:</label>
+                <textarea id="textFeedback" class="form-control" required></textarea>
+                <div class="invalid-feedback">Forneça um Feedback</div>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Voltar</button>
+                <button type="submit" class="btn btn-primary">Enviar Feedback</button>
               </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Fechar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Enviar Feedback
-            </button>
           </div>
         </div>
       </div>
@@ -349,6 +328,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><!--  -->
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
